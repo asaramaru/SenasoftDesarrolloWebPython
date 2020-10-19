@@ -76,7 +76,7 @@ def contacto(request):
 
 		if miFormulario.is_valid():
 			infoForm = miFormulario.cleaned_data
-			send_mail(infoForm['asunto'], infoForm['mensaje'] + "   Correo:   " + infoForm['email'], infoForm['email'], ['diegoalejomon77@gmail.com'],)
+			send_mail(infoForm['asunto'], infoForm['mensaje'] + "   Correo:   " + infoForm['email'], infoForm['email'], [''],)
 			return render(request, 'envios.html')
 
 	else:
